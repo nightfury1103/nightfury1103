@@ -1,4 +1,5 @@
-﻿<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="icon" type="image/png" href="image/favicon.ico">
 		<title>Tôi Yêu Bạn</title>	    
         <link type="text/css" rel="stylesheet" href="./renxi/default.css">
@@ -17,42 +18,91 @@
 .STYLE1 {color: #666666}
 -->
         </style>
+        <script>
+      var openFile = function(event) {
+        var input = event.target;
+
+        var reader = new FileReader();
+        reader.onload = function(){
+          var text = reader.result;
+          var node = document.getElementById('output');
+          node.innerText = text;
+          console.log(reader.result.substring(0, 200));
+        };
+        reader.readAsText(input.files[0]);
+      };
+    </script>  
 </head>
+    
     <body scroll="no" style="overflow: hidden" bottom="50">
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0" nonce="8lp9Dfus"></script>
+
+<div class="fb-share-button" data-href="https://nightfury1103.github.io" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia sẻ</a></div>
 			<audio autoplay="autopaly">
 					<source src="music/ido.mp3" type="audio/mp3">
 			</audio>  
+
         <div id="main">
             <div id="error">Trình duyệt của bạn không được hỗ trợ. Để được hỗ trợ liên hệ . Hoặc sử dụng (<a href="http://www.google.cn/chrome">Chrome</a>) và (<a href="http://firefox.com/download/">Firefox</a>)</div>
              <div id="wrap">
                 <div id="text">
 			        <div id="code">
-			      <font color="#3498db"><span class="say">Phương Quỳnh,</span><br>
+			      <font color="#3498db"><span class="say">Nhóm 27,</span><br>
 						<span class="say"> </span><br>
-						<span class="say">Chà mới đó mà đó mà đã hơn hai năm.</span><br>
-						<span class="say">Em và chị quen nhau rồi nhỉ !</span><br>
-						<span class="say">Chúc chị thêm tuổi mới !</span><br>
-						<span class="say">Ngày càng thêm xinh đẹp đi học nợ môn đều đều</span><br>
-						<span class="say">Ăn nhiều vô cho mập đỡ ba mẹ lo :v</span><br>
-						<span class="say">Thêm tuổi bớt trẻ tru lo mà biết chăm sóc bản thân đi nghen! &lt;3</span><br>
-						<span class="say">Và cuối cùng em muốn nói là....</span><br>
-						<span class="say">" Trời không nắng nữa cũng được " </span><br>
+						<span class="say">Cám ơn thầy và các bạn .</span><br>
+						<span class="say">Đã bỏ chút thời gian</span><br>
+						<span class="say">Để xem đồ án của chung em</span><br>
+						<span class="say">Chúc thầy và các bạn</span><br>
+						<span class="say">Một ngày tốt lành</span><br>
+						<span class="say">Cám ơn thầy và các bạn đã lắng nghe! &lt;3</span><br>
 						<span class="say">  </span><br>
                         <span class="say"><span class="space"></span> -- Vì em không cần bầu trời nào xanh hơn nụ cười của chị nữa đâu ❤ --</span></br><br><br><br>
 						<span class="say"><b></b></span><br>
-						<span class="say"><b>Facebook:</b> https://www.facebook.com/nightfuryhuy</span><br>
+						<span class="say"><b></b> </span><br>
 			  </font><p></p>
       </div>
+        
                 </div>
                 <div id="clock-box">
-                    <span class="STYLE1"></span><font color="#FF0000">Phương Quỳnh ❤ </font>
+                
+                    <span class="STYLE1"></span><font color="#FF0000">Chọn File để share ❤ 
+                    </font>
+                    
+                    <input type='file' accept='text/plain' onchange='openFile(event)'><br>
+                    <div id='output'>
+                        
+                    </div>
+                    <div id="fb-root"></div>
 <span class="STYLE1"><span>
+
+
                   <div id="clock"></div>
               </div>
                 <canvas id="canvas" width="1100" height="680"></canvas>
             </div>
             
         </div>
+        
+        <input type="file" name="inputfile"
+            id="inputfile"> 
+    <br> 
+   
+    <pre id="output"></pre> 
+      
+    <script type="text/javascript"> 
+        document.getElementById('inputfile') 
+            .addEventListener('change', function() { 
+              
+            var fr=new FileReader(); 
+            fr.onload=function(){ 
+                document.getElementById('output') 
+                        .textContent=fr.result; 
+            } 
+              
+            fr.readAsText(this.files[0]); 
+        }) 
+        
+    </script> 
     
     <script>
     </script>
@@ -216,5 +266,6 @@
 
 </div>
 
-
+ 
+    
 </body><div></div></html>
